@@ -31,22 +31,22 @@ export default function FeatureRow({
       id={id}
       className={tone === "mist" ? "bg-mist" : "bg-paper"}
     >
-      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 sm:px-8 sm:py-24 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <Reveal
           className={imageFirst ? "lg:order-1" : "lg:order-2"}
         >
           <div className="relative">
             <div
-              className={`absolute -z-0 hidden h-32 w-32 rounded-3xl bg-cloud sm:block ${
-                imageFirst ? "-left-6 -top-6" : "-right-6 -top-6"
+              className={`absolute -z-0 hidden h-44 w-44 rounded-[2rem] bg-cloud sm:block ${
+                imageFirst ? "-left-7 -top-7" : "-right-7 -top-7"
               }`}
             />
-            <div className="relative overflow-hidden rounded-[1.5rem] border border-line shadow-[0_30px_70px_-45px_rgba(15,27,45,0.45)]">
+            <div className="relative overflow-hidden rounded-[1.75rem] border border-line shadow-[0_40px_80px_-45px_rgba(15,27,45,0.5)]">
               <img
                 src={image}
                 alt={alt}
                 loading="lazy"
-                className="aspect-[4/3] w-full object-cover"
+                className="aspect-[4/3] w-full object-cover lg:aspect-auto lg:h-[560px]"
               />
             </div>
           </div>

@@ -6,12 +6,14 @@ const NAV = [
   { label: "La méthode", href: "#methode" },
   { label: "Le programme", href: "#programme" },
   { label: "Formats", href: "#formats" },
+  { label: "Tarifs", href: "#tarifs" },
   { label: "Témoignages", href: "#temoignages" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [lang, setLang] = useState<"fr" | "en">("fr");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -49,12 +51,30 @@ export default function Header() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <span className="hidden text-xs font-semibold tracking-wide text-slate-mute sm:inline">
-            FR / EN
-          </span>
+          <div
+            className="hidden items-center rounded-full border border-line p-0.5 sm:inline-flex"
+            role="group"
+            aria-label="Changer de langue"
+          >
+            {(["fr", "en"] as const).map((l) => (
+              <button
+                key={l}
+                type="button"
+                onClick={() => setLang(l)}
+                aria-pressed={lang === l}
+                className={`rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide transition-colors ${
+                  lang === l
+                    ? "bg-ink text-paper"
+                    : "text-slate-mute hover:text-ink"
+                }`}
+              >
+                {l}
+              </button>
+            ))}
+          </div>
           <a
             href="#contact"
-            className="hidden rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-ink-2 sm:inline-block"
+            className="hidden rounded-full bg-indigo px-5 py-2.5 text-sm font-semibold text-paper transition-colors hover:bg-indigo-deep sm:inline-block"
           >
             Contact
           </a>

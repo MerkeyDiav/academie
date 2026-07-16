@@ -27,7 +27,7 @@ const FORMATS = [
 export default function Formats() {
   return (
     <section id="formats" className="bg-paper">
-      <div className="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24">
+      <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8 sm:py-20">
         <div className="max-w-2xl">
           <Reveal>
             <h2 className="text-[2rem] font-bold leading-[1.12] text-ink sm:text-[2.6rem]">
@@ -46,21 +46,21 @@ export default function Formats() {
           {FORMATS.map((f, i) => (
             <Reveal key={f.title} delay={i * 90}>
               <div className="group h-full">
-                <div className="overflow-hidden rounded-[1.25rem] border border-line">
+                <div className="overflow-hidden rounded-[1.75rem] border border-line shadow-[0_30px_60px_-45px_rgba(15,27,45,0.5)]">
                   <img
                     src={f.image}
                     alt={f.alt}
                     loading="lazy"
-                    className="aspect-[5/4] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05] lg:h-[380px]"
                   />
                 </div>
-                <span className="mt-5 inline-block rounded-full bg-indigo-soft px-3 py-1 text-xs font-semibold text-indigo-deep">
+                <span className="mt-6 inline-block rounded-full bg-indigo-soft px-3.5 py-1.5 text-sm font-semibold text-indigo-deep">
                   {f.tag}
                 </span>
-                <h3 className="mt-3 text-xl font-semibold text-ink">
+                <h3 className="mt-4 text-2xl font-semibold text-ink">
                   {f.title}
                 </h3>
-                <p className="mt-2 text-[15px] leading-relaxed text-slate">
+                <p className="mt-2.5 text-[16px] leading-relaxed text-slate">
                   {f.text}
                 </p>
               </div>

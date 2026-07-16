@@ -18,16 +18,16 @@ const POINTS = [
 export default function HighlightBand() {
   return (
     <section className="bg-ink text-paper">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[1fr_1fr] lg:gap-16">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 py-16 sm:px-8 sm:py-24 lg:grid-cols-[1.05fr_0.95fr] lg:gap-14">
         <Reveal>
           <div className="relative">
-            <div className="absolute -bottom-6 -right-6 hidden h-36 w-36 rounded-3xl bg-indigo/30 sm:block" />
+            <div className="absolute -bottom-7 -right-7 hidden h-44 w-44 rounded-[2rem] bg-indigo/40 sm:block" />
             <div className="relative overflow-hidden rounded-[1.75rem] border border-white/10 shadow-2xl">
               <img
                 src="/images/img6.jpg"
                 alt="Poste de travail à domicile avec du code sur l'écran d'un ordinateur portable"
                 loading="lazy"
-                className="aspect-[4/3] w-full object-cover"
+                className="aspect-[4/3] w-full object-cover lg:aspect-auto lg:h-[560px]"
               />
             </div>
           </div>

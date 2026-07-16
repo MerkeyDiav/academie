@@ -2,9 +2,11 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import FeatureRow from "./components/FeatureRow";
 import HighlightBand from "./components/HighlightBand";
+import Curriculum from "./components/Curriculum";
 import Formats from "./components/Formats";
 import Process from "./components/Process";
 import Testimonials from "./components/Testimonials";
+import Pricing from "./components/Pricing";
 import FinalCta from "./components/FinalCta";
 import Footer from "./components/Footer";
 
@@ -101,9 +103,11 @@ export default function Home() {
           </p>
         </FeatureRow>
 
+        <Curriculum />
         <Formats />
         <Process />
         <Testimonials />
+        <Pricing />
         <FinalCta />
       </main>
       <Footer />

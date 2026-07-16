@@ -39,34 +39,34 @@ export default function Testimonials() {
           </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-7 md:grid-cols-3">
           {QUOTES.map((t, i) => (
             <Reveal key={t.name} delay={i * 90}>
-              <figure className="flex h-full flex-col rounded-2xl bg-mist p-7">
+              <figure className="flex h-full flex-col rounded-3xl bg-mist p-8 sm:p-9">
                 <svg
-                  width="32"
-                  height="32"
+                  width="42"
+                  height="42"
                   viewBox="0 0 24 24"
                   className="text-indigo/25"
                   fill="currentColor"
                 >
                   <path d="M9.5 6C6.5 6 4 8.6 4 12v6h6v-6H7c0-1.9 1.1-3 2.5-3V6Zm10 0c-3 0-5.5 2.6-5.5 6v6h6v-6h-3c0-1.9 1.1-3 2.5-3V6Z" />
                 </svg>
-                <blockquote className="mt-4 flex-1 text-[16px] leading-relaxed text-ink">
+                <blockquote className="mt-5 flex-1 text-[19px] leading-relaxed text-ink">
                   {t.quote}
                 </blockquote>
-                <figcaption className="mt-6 flex items-center gap-3.5 border-t border-line pt-5">
+                <figcaption className="mt-7 flex items-center gap-4 border-t border-line pt-6">
                   <img
                     src={t.photo}
                     alt={t.name}
                     loading="lazy"
-                    className="h-12 w-12 rounded-full object-cover"
+                    className="h-14 w-14 rounded-full object-cover"
                   />
                   <span>
-                    <span className="block text-sm font-semibold text-ink">
+                    <span className="block text-base font-semibold text-ink">
                       {t.name}
                     </span>
-                    <span className="block text-[13px] text-slate-mute">
+                    <span className="block text-sm text-slate-mute">
                       {t.role}, {t.location}
                     </span>
                   </span>

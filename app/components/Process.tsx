@@ -26,7 +26,7 @@ const STEPS = [
 export default function Process() {
   return (
     <section id="programme" className="bg-mist">
-      <div className="mx-auto grid max-w-6xl gap-14 px-5 py-20 sm:px-8 sm:py-28 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
         <div className="lg:sticky lg:top-28 lg:self-start">
           <Reveal>
             <h2 className="text-[2rem] font-bold leading-[1.1] text-ink sm:text-[2.6rem]">
@@ -41,12 +41,12 @@ export default function Process() {
             </p>
           </Reveal>
           <Reveal delay={190}>
-            <div className="mt-8 overflow-hidden rounded-[1.25rem] border border-line">
+            <div className="mt-8 overflow-hidden rounded-[1.5rem] border border-line shadow-[0_30px_70px_-50px_rgba(15,27,45,0.5)]">
               <img
                 src="/images/img12.jpg"
                 alt="Feuille de route de projet composée d'écrans d'application épinglés sur un mur"
                 loading="lazy"
-                className="aspect-[4/3] w-full object-cover"
+                className="aspect-[4/3] w-full object-cover lg:aspect-auto lg:h-[440px]"
               />
             </div>
           </Reveal>
