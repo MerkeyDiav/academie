@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #ffffff;
+  --color-mist: #f5f7fc;
+  --color-cloud: #eceffb;
+  --color-ink: #0f1b2d;
+  --color-ink-2: #16273f;
+  --color-slate: #4b5568;
+  --color-slate-mute: #7f8899;
+  --color-line: #e6e9f0;
+  --color-indigo: #4f46e5;
+  --color-indigo-deep: #4338ca;
+  --color-indigo-soft: #ebeafc;
+  --color-sky-soft: #e6f0fb;
+
+  --font-display: var(--font-sora), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-indigo);
+  color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.75s var(--ease-out-quint),
+      transform 0.75s var(--ease-out-quint);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
